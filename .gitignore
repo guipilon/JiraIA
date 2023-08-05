@@ -6,3 +6,4 @@
 /src/JiraIA.Infra/obj
 /test/JiraIA.UnitTest/bin/Debug/net6.0
 /test/JiraIA.UnitTest/obj
+/.vs
