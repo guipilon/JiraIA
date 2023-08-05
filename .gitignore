@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/JiraIA.Domain/obj
+/src/JiraIA.Infra/obj
+/test/JiraIA.UnitTest/bin/Debug/net6.0
+/test/JiraIA.UnitTest/obj

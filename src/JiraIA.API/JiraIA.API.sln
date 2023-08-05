@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraIA.API", "JiraIA.API.csproj", "{CBD198A1-F240-46AF-ABCB-452894CAEE67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A2E916BC-2F63-40B8-8F33-57384057FECA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{21A6E2B6-447C-4067-AE58-119CE717EF9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraIA.UnitTest", "..\..\test\JiraIA.UnitTest\JiraIA.UnitTest.csproj", "{7779FA25-31AD-4524-BE12-2D0FD750E930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraIA.Domain", "..\JiraIA.Domain\JiraIA.Domain.csproj", "{05233BCD-12D2-4203-8A49-4E76ABBE388B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraIA.Infra", "..\JiraIA.Infra\JiraIA.Infra.csproj", "{A56F0042-B4E0-4D7B-999E-2157E5F09140}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBD198A1-F240-46AF-ABCB-452894CAEE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD198A1-F240-46AF-ABCB-452894CAEE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD198A1-F240-46AF-ABCB-452894CAEE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD198A1-F240-46AF-ABCB-452894CAEE67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7779FA25-31AD-4524-BE12-2D0FD750E930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7779FA25-31AD-4524-BE12-2D0FD750E930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7779FA25-31AD-4524-BE12-2D0FD750E930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7779FA25-31AD-4524-BE12-2D0FD750E930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05233BCD-12D2-4203-8A49-4E76ABBE388B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05233BCD-12D2-4203-8A49-4E76ABBE388B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05233BCD-12D2-4203-8A49-4E76ABBE388B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05233BCD-12D2-4203-8A49-4E76ABBE388B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A56F0042-B4E0-4D7B-999E-2157E5F09140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A56F0042-B4E0-4D7B-999E-2157E5F09140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A56F0042-B4E0-4D7B-999E-2157E5F09140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A56F0042-B4E0-4D7B-999E-2157E5F09140}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CBD198A1-F240-46AF-ABCB-452894CAEE67} = {A2E916BC-2F63-40B8-8F33-57384057FECA}
+		{7779FA25-31AD-4524-BE12-2D0FD750E930} = {21A6E2B6-447C-4067-AE58-119CE717EF9C}
+		{05233BCD-12D2-4203-8A49-4E76ABBE388B} = {A2E916BC-2F63-40B8-8F33-57384057FECA}
+		{A56F0042-B4E0-4D7B-999E-2157E5F09140} = {A2E916BC-2F63-40B8-8F33-57384057FECA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19DBDDF6-45CF-4B0E-83C2-CBA990ECAFE8}
+	EndGlobalSection
+EndGlobal
