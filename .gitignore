@@ -7,3 +7,6 @@
 /test/JiraIA.UnitTest/bin/Debug/net6.0
 /test/JiraIA.UnitTest/obj
 /.vs
+/src/JiraIA.Domain/bin/Release/net6.0
+/src/JiraIA.Infra/bin/Release/net6.0
+/test/JiraIA.UnitTest/bin/Release/net6.0
