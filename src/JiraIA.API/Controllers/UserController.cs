@@ -32,7 +32,7 @@ namespace JiraIA.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<IEnumerable<UserDTO>>> DeleteUser([FromRoute] string id)
+        public async Task<ActionResult> DeleteUser([FromRoute] string id)
         {
             await _userService.DeleteUser(id);
 
