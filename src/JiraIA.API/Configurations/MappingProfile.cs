@@ -6,13 +6,21 @@ namespace JiraIA.API.Configurations
 {
     public class MappingProfile : Profile
     {
-        public MappingProfile() 
-        { 
+        public MappingProfile()
+        {
             CreateMap<UserDTO, User>()
-                .AfterMap((src,dest) => 
+                .AfterMap((src, dest) =>
                 {
                     dest.Id = Guid.NewGuid().ToString();
                     dest.CreatedAt = DateTime.UtcNow;
+                })
+                .ReverseMap();
+
+            CreateMap<BoardStatusDTO, BoardStatus>()
+                .AfterMap((src, dest) =>
+                {
+                    dest.Id = Guid.NewGuid().ToString();
+                    dest.IsDeleted = false;
                 })
                 .ReverseMap();
         }

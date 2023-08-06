@@ -11,8 +11,8 @@ namespace JiraIA.UnitTest
     {
         private Mock<IUserService> _userService;
 
-        public UserControllerShould() 
-        { 
+        public UserControllerShould()
+        {
             _userService = new Mock<IUserService>();
         }
 

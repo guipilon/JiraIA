@@ -4,11 +4,6 @@ using JiraIA.Domain.Interfaces;
 using JiraIA.Domain.Interfaces.Repositories;
 using JiraIA.Domain.Interfaces.Services;
 using JiraIA.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JiraIA.Domain.Services
 {
@@ -17,8 +12,8 @@ namespace JiraIA.Domain.Services
         private IUserRepository _userRepository;
         private IMapper _mapper;
 
-        public UserService(IUserRepository userRepository, IMapper mapper, IUnitOfWork unitOfWork) 
-            :base(unitOfWork)
+        public UserService(IUserRepository userRepository, IMapper mapper, IUnitOfWork unitOfWork)
+            : base(unitOfWork)
         {
             _userRepository = userRepository;
             _mapper = mapper;

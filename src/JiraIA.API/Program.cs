@@ -20,9 +20,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.Configure<ConnectionStringsProvider>(builder.Configuration.GetSection("ConnectionStrings"));
 builder.Services.Configure<DbSettingsProvider>(builder.Configuration.GetSection("DbSettings"));
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+builder.Services.AddScoped<IBoardStatusRepository, BoardStatusRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IBoardStatusService, BoardStatusService>();
 builder.Services.AddSingleton<IMongoClient, MongoClient>(MongoClientFactory.Create);
 builder.Services.AddSingleton<JiraIAContext>();
 builder.Services.AddScoped(conn => conn.GetService<IMongoClient>().StartSession());
@@ -34,7 +36,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    
+
 }
 
 app.UseSwagger();

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JiraIA.Domain.Models
+﻿namespace JiraIA.Domain.Models
 {
     public class User : BaseEntity
     {

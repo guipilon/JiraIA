@@ -1,11 +1,5 @@
 ﻿using JiraIA.Domain.Interfaces;
-using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JiraIA.Infra.UoW
 {
@@ -25,7 +19,7 @@ namespace JiraIA.Infra.UoW
                 await _clientSessionHandle.CommitTransactionAsync();
                 return true;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 return false;
             }
