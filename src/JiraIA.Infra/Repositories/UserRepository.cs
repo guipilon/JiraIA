@@ -38,15 +38,8 @@ namespace JiraIA.Infra.Repositories
                 .ToList();
         }
 
-        public async Task<User> InsertUser(string username, string password, string role)
+        public async Task<User> InsertUser(User user)
         {
-            User user = new()
-            {
-                UserName = username,
-                Password = password,
-                Role = role
-            };
-
             await InsertAsync(user);
 
             return user;

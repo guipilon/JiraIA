@@ -8,8 +8,13 @@ namespace JiraIA.API.Configurations
     {
         public MappingProfile() 
         { 
-            CreateMap<UserDTO, User>().ReverseMap();
-            //CreateMap<IEnumerable<UserDTO>, IEnumerable<User>>().ReverseMap();
+            CreateMap<UserDTO, User>()
+                .AfterMap((src,dest) => 
+                {
+                    dest.Id = Guid.NewGuid().ToString();
+                    dest.CreatedAt = DateTime.UtcNow;
+                })
+                .ReverseMap();
         }
     }
 }

@@ -19,7 +19,24 @@ namespace JiraIA.API.Controllers
         public ActionResult<IEnumerable<UserDTO>> GetAllUser()
         {
             var users = _userService.GetAllUser();
+
             return Ok(users);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<UserDTO>> AddUser([FromBody] UserDTO user)
+        {
+            var userCreated = await _userService.AddUser(user);
+
+            return Ok(userCreated);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<IEnumerable<UserDTO>>> DeleteUser([FromRoute] string id)
+        {
+            await _userService.DeleteUser(id);
+
+            return Ok();
         }
 
     }

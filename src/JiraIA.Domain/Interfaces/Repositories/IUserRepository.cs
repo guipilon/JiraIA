@@ -15,7 +15,7 @@ namespace JiraIA.Domain.Interfaces.Repositories
 
         IEnumerable<User> GetByRole(string role);
 
-        Task<User> InsertUser(string username, string password, string role);
+        Task<User> InsertUser(User user);
 
         Task<User> UpdateUserName(string id, string newUserName);
 
