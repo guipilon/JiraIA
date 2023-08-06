@@ -10,3 +10,5 @@
 /src/JiraIA.Domain/bin/Release/net6.0
 /src/JiraIA.Infra/bin/Release/net6.0
 /test/JiraIA.UnitTest/bin/Release/net6.0
+/src/JiraIA.Domain/bin/Debug/net6.0
+/src/JiraIA.Infra/bin/Debug/net6.0
