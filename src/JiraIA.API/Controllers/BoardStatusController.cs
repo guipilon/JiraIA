@@ -17,7 +17,7 @@ namespace JiraIA.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<BoardStatusDTO>> GetAllUser()
+        public ActionResult<IEnumerable<BoardStatusDTO>> GetAllBoardStatus()
         {
             var boardStatus = _boardStatusService.GetAllBoardStatus();
 
@@ -33,7 +33,7 @@ namespace JiraIA.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteUser([FromRoute] string id)
+        public async Task<ActionResult> DeleteBoardStatus([FromRoute] string id)
         {
             var statusDeleted = await _boardStatusService.DeleteBoardStatus(id);
 

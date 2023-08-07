@@ -11,15 +11,15 @@ namespace JiraIA.API.Configurations
             CreateMap<UserDTO, User>()
                 .AfterMap((src, dest) =>
                 {
-                    dest.Id = Guid.NewGuid().ToString();
-                    dest.CreatedAt = DateTime.UtcNow;
+                    dest.Id = src.Id == null? Guid.NewGuid().ToString(): src.Id;
+                    dest.CreatedAt = (DateTime)(src.CreatedAt == null? DateTime.UtcNow: src.CreatedAt);
                 })
                 .ReverseMap();
 
             CreateMap<BoardStatusDTO, BoardStatus>()
                 .AfterMap((src, dest) =>
                 {
-                    dest.Id = Guid.NewGuid().ToString();
+                    dest.Id = src.Id == null ? Guid.NewGuid().ToString() : src.Id;
                     dest.IsDeleted = false;
                 })
                 .ReverseMap();
