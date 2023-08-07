@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace JiraIA.Domain.Models
+﻿namespace JiraIA.Domain.Models
 {
     public class TaskModel : BaseEntity
     {

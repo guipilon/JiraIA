@@ -12,9 +12,9 @@ namespace JiraIA.Domain.Services
         private IBoardStatusRepository _boardStatusRepository;
         private IMapper _mapper;
 
-        public BoardStatusService(IBoardStatusRepository boardStatusRepository, IMapper mapper, IUnitOfWork unitOfWork) 
-            :base(unitOfWork) 
-        { 
+        public BoardStatusService(IBoardStatusRepository boardStatusRepository, IMapper mapper, IUnitOfWork unitOfWork)
+            : base(unitOfWork)
+        {
             _boardStatusRepository = boardStatusRepository;
             _mapper = mapper;
         }
@@ -36,9 +36,9 @@ namespace JiraIA.Domain.Services
         {
             var boardStatusToBeDeleated = _boardStatusRepository.GetBoardStatusById(id);
 
-            if(boardStatusToBeDeleated == null) 
-            { 
-                return default; 
+            if (boardStatusToBeDeleated == null)
+            {
+                return default;
             }
 
             boardStatusToBeDeleated.IsDeleted = true;

@@ -1,7 +1,6 @@
 using JiraIA.API.Controllers;
 using JiraIA.Domain.DTOs;
 using JiraIA.Domain.Interfaces.Services;
-using JiraIA.Domain.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;

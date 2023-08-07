@@ -1,7 +1,6 @@
 ﻿using JiraIA.Domain.DTOs;
 using JiraIA.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.NetworkInformation;
 
 namespace JiraIA.API.Controllers
 {

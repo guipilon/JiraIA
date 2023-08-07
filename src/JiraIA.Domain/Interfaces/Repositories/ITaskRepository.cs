@@ -16,6 +16,6 @@ namespace JiraIA.Domain.Interfaces.Repositories
 
         Task<TaskModel> CreateTask(TaskModel task);
 
-        Task<TaskModel> DeleteTask(TaskModel task);
+        Task<TaskModel> DeleteTask(string id);
     }
 }

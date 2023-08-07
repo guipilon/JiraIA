@@ -1,14 +1,10 @@
 using AutoMapper;
 using JiraIA.API.Configurations;
-using JiraIA.API.Controllers;
 using JiraIA.Domain.DTOs;
 using JiraIA.Domain.Interfaces;
 using JiraIA.Domain.Interfaces.Repositories;
-using JiraIA.Domain.Interfaces.Services;
 using JiraIA.Domain.Models;
 using JiraIA.Domain.Services;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Moq;
 
 namespace JiraIA.UnitTest

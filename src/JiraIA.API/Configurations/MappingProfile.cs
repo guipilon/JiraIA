@@ -11,8 +11,8 @@ namespace JiraIA.API.Configurations
             CreateMap<UserDTO, User>()
                 .AfterMap((src, dest) =>
                 {
-                    dest.Id = src.Id == null? Guid.NewGuid().ToString(): src.Id;
-                    dest.CreatedAt = (DateTime)(src.CreatedAt == null? DateTime.UtcNow: src.CreatedAt);
+                    dest.Id = src.Id == null ? Guid.NewGuid().ToString() : src.Id;
+                    dest.CreatedAt = (DateTime)(src.CreatedAt == null ? DateTime.UtcNow : src.CreatedAt);
                 })
                 .ReverseMap();
 

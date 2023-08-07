@@ -4,8 +4,6 @@ using JiraIA.Domain.Interfaces;
 using JiraIA.Domain.Interfaces.Repositories;
 using JiraIA.Domain.Interfaces.Services;
 using JiraIA.Domain.Models;
-using System.Net.NetworkInformation;
-using System.Threading.Tasks;
 
 namespace JiraIA.Domain.Services
 {
@@ -74,7 +72,7 @@ namespace JiraIA.Domain.Services
         public async Task<TaskDTO> DeleteTask(string id)
         {
             var taskToBeDeleted = _mapper.Map<TaskModel>(id);
-            var taskDeleted = await _taskRepository.DeleteTask(taskToBeDeleted);
+            var taskDeleted = await _taskRepository.DeleteTask(taskToBeDeleted.Id);
 
             if (!await CommitAsync())
             {

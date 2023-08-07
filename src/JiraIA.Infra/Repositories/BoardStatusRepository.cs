@@ -24,7 +24,7 @@ namespace JiraIA.Infra.Repositories
                     .FirstOrDefault();
         }
 
-        public async void UpdateBoardStatus(BoardStatus boardStatus) 
+        public async void UpdateBoardStatus(BoardStatus boardStatus)
         {
             await UpdateAsync(boardStatus);
         }
