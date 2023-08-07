@@ -41,6 +41,8 @@ namespace JiraIA.Infra.Repositories
         {
             return GetQueryble()
                 .Where(x => x.Status == status)
+                .OrderBy(x => x.Name)
+                .ThenBy(x => x.IsFavorited)
                 .ToList();
         }
 
