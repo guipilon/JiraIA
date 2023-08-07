@@ -10,7 +10,7 @@ namespace JiraIA.Domain.DTOs
         [Required]
         public string? Description { get; set; }
         [Required]
-        public string? Deadline { get; set; }
+        public DateTime? Deadline { get; set; }
 
         public string? AssignedTo { get; set; }
 

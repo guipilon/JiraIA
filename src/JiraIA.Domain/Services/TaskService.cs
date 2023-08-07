@@ -58,6 +58,10 @@ namespace JiraIA.Domain.Services
 
         public async Task<TaskDTO> CreateTask(TaskDTO task)
         {
+            /*TODO:
+             * verify if username exists before creating a task
+             * verify if status is a valid one
+            */
             var newTask = _mapper.Map<TaskModel>(task);
             var taskCreated = await _taskRepository.CreateTask(newTask);
 

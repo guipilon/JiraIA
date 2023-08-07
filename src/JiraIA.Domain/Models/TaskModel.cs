@@ -8,7 +8,7 @@
 
         public string Description { get; set; }
 
-        public string Deadline { get; set; }
+        public DateTime Deadline { get; set; }
 
         public string AssignedTo { get; set; }
 
