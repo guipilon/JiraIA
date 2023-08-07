@@ -6,7 +6,7 @@ namespace JiraIA.Domain.Interfaces.Services
     {
         IEnumerable<TaskDTO> GetAllTasks();
 
-        IEnumerable<TaskDTO> GetTaskByStatus(string id);
+        IEnumerable<TaskDTO> GetTaskByStatus(string status);
 
         IEnumerable<TaskDTO> GetTaskByUser(string username);
 
@@ -16,6 +16,6 @@ namespace JiraIA.Domain.Interfaces.Services
 
         Task<TaskDTO> CreateTask(TaskDTO user);
 
-        Task DeleteTask(string id);
+        Task<TaskDTO> DeleteTask(string id);
     }
 }

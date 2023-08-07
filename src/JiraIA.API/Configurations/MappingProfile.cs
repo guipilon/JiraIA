@@ -23,6 +23,13 @@ namespace JiraIA.API.Configurations
                     dest.IsDeleted = false;
                 })
                 .ReverseMap();
+
+            CreateMap<TaskDTO, TaskModel>()
+                .AfterMap((src, dest) =>
+                {
+                    dest.Id = src.Id == null ? Guid.NewGuid().ToString() : src.Id;
+                })
+                .ReverseMap();
         }
     }
 }
