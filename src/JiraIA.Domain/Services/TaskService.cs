@@ -75,7 +75,10 @@ namespace JiraIA.Domain.Services
 
         public async Task<TaskDTO> DeleteTask(string id)
         {
-            var taskToBeDeleted = _mapper.Map<TaskModel>(id);
+            var taskToBeDeleted = _taskRepository.GetTaskById(id);
+            /*TODO:
+             * Throw error if task do not exist
+            */
             var taskDeleted = await _taskRepository.DeleteTask(taskToBeDeleted.Id);
 
             if (!await CommitAsync())
